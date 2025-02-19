@@ -23,28 +23,44 @@ namespace Rocky
             Assert.That(result, Is.EqualTo(3));
         }
 
-        [Test]
-        public void IsOdd_WhenValueIsOdd_ReturnsTrue()
-        {
-            // Arrange
-            var calculator = new Calculator();
-            int value = 1;
-            // Act
-            bool result = calculator.IsOdd(value);
-            // Assert
-            Assert.That(result, Is.True);
-        }
+        //[Test]
+        //[TestCase(1)]
+        //[TestCase(3)]
+        //[TestCase(5)]
+        //public void IsOdd_WhenValueIsOdd_ReturnsTrue(int value)
+        //{
+        //    // Arrange
+        //    var calculator = new Calculator();
+        //    // Act
+        //    bool result = calculator.IsOdd(value);
+        //    // Assert
+        //    Assert.That(result, Is.True);
+        //}
 
+        //[Test]
+        //[TestCase(2)]
+        //[TestCase(4)]
+
+        //public void IsOdd_WhenValueIsEven_ReturnsFalse(int value)
+        //{
+        //    // Arrange
+        //    var calculator = new Calculator();
+        //    // Act
+        //    bool result = calculator.IsOdd(value);
+        //    // Assert
+        //    Assert.That(result, Is.False);
+        //}
+
+        // writing a siggle test for the IsOdd method
         [Test]
-        public void IsOdd_WhenValueIsEven_ReturnsFalse()
+        [TestCase(3, ExpectedResult = true)]
+        [TestCase(4, ExpectedResult = false)]
+        public bool IsOdd_Input_ReturnsTrue(int value)
         {
             // Arrange
             var calculator = new Calculator();
-            int value = 2;
             // Act
-            bool result = calculator.IsOdd(value);
-            // Assert
-            Assert.That(result, Is.False);
+            return calculator.IsOdd(value);
         }
     }
 }
