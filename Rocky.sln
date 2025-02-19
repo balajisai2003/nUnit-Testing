@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocky", "Rocky\Rocky.csproj", "{A702D9B7-9077-1EB6-E5C4-8A84262840B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockyN-UnitTests", "RockyN-UnitTests\RockyN-UnitTests.csproj", "{48604CC5-673A-4554-A8C0-C1AAC9B50B14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A702D9B7-9077-1EB6-E5C4-8A84262840B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A702D9B7-9077-1EB6-E5C4-8A84262840B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A702D9B7-9077-1EB6-E5C4-8A84262840B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48604CC5-673A-4554-A8C0-C1AAC9B50B14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48604CC5-673A-4554-A8C0-C1AAC9B50B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48604CC5-673A-4554-A8C0-C1AAC9B50B14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48604CC5-673A-4554-A8C0-C1AAC9B50B14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
