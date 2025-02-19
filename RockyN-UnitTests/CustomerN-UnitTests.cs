@@ -10,14 +10,22 @@ namespace Rocky
     [TestFixture]
     public class CustomerN_UnitTests
     {
+        private Customer? customer;
+
+
+        // Arrange
+        [SetUp]
+        public void SetUp()
+        {
+            // This method will run before every test
+            customer = new Customer();
+        }
         [Test]
         [TestCase("Rocky", "Balboa", ExpectedResult = "Hi Rocky Balboa")]
         [TestCase("Tom", "Jerry", ExpectedResult = "Hi Tom Jerry")]
         [TestCase("Tom", "", ExpectedResult = "Hi Tom ")]
         public string GreetAndCombineNames_WhenCalled_ReturnsGreetedFullName(string firstName, string lastName)
         {
-            // Arrange
-            var customer = new Customer();
             // Act
             customer.GreetAndCombineNames(firstName, lastName);
             // Assert
@@ -30,8 +38,6 @@ namespace Rocky
         [TestCase("Tom", "Jerry")]
         public void GreetAndCombineNames_WhenCalled_ReturnsFullNameWithNecessaryThings(string firstName, string lastName)
         {
-            // Arrange
-            var customer = new Customer();
             // Act
             customer.GreetAndCombineNames(firstName, lastName);
             // Assert
@@ -45,8 +51,6 @@ namespace Rocky
         [Test]
         public void CheckIfCustomerGreetMessageIsNotNull()
         {
-            // Arrange
-            var customer = new Customer();
             // Assert
             Assert.ByVal(customer.GreetMessage, Is.Null);
         }
