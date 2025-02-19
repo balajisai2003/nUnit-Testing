@@ -19,9 +19,9 @@ namespace Rocky
             // Arrange
             var customer = new Customer();
             // Act
-            string result = customer.GreetAndCombineNames(firstName, lastName);
+            customer.GreetAndCombineNames(firstName, lastName);
             // Assert
-            return result;
+            return customer.GreetMessage;
         }
 
 
@@ -33,13 +33,22 @@ namespace Rocky
             // Arrange
             var customer = new Customer();
             // Act
-            string result = customer.GreetAndCombineNames(firstName, lastName);
+            customer.GreetAndCombineNames(firstName, lastName);
             // Assert
-            Assert.That(result.Split().Length, Is.EqualTo(3));
-            Assert.That(result, Does.Contain("Hi").IgnoreCase);
-            Assert.That(result, Does.StartWith("Hi"));
-            Assert.That(result, Does.EndWith(lastName));
+            Assert.That(customer.GreetMessage.Split().Length, Is.EqualTo(3));
+            Assert.That(customer.GreetMessage, Does.Contain("Hi").IgnoreCase);
+            Assert.That(customer.GreetMessage, Does.StartWith("Hi"));
+            Assert.That(customer.GreetMessage, Does.EndWith(lastName));
 
+        }
+
+        [Test]
+        public void CheckIfCustomerGreetMessageIsNotNull()
+        {
+            // Arrange
+            var customer = new Customer();
+            // Assert
+            Assert.ByVal(customer.GreetMessage, Is.Null);
         }
     }
 
