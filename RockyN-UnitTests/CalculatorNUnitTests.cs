@@ -77,5 +77,19 @@ namespace Rocky
             // Assert
             return result;
         }
+
+
+        [Test]
+        [TestCase(1, 10, new int[] { 1, 3, 5, 7, 9 })]
+        [TestCase(1, 5, new int[] { 1, 3, 5 })]
+        public void GetOddRange_WhenCalled_ReturnsOddNumbersInRange(int min, int max, int[] expectedResult)
+        {
+            // Arrange
+            var calculator = new Calculator();
+            // Act
+            List<int> result = calculator.GetOddRange(min, max);
+            // Assert
+            Assert.That(result, Is.EquivalentTo(expectedResult));
+        }
     }
 }
