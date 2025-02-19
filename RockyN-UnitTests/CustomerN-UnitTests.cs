@@ -54,6 +54,13 @@ namespace Rocky
             // Assert
             Assert.ByVal(customer.GreetMessage, Is.Null);
         }
+
+        [Test]
+        public void DiscountCheck_DefaultCustomer_ReturnsDiscountInRange()
+        {
+            double result = customer.Discount; 
+            Assert.That(result, Is.InRange(10, 25));
+        }
     }
 
 
