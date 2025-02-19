@@ -39,13 +39,16 @@ namespace Rocky
         public void GreetAndCombineNames_WhenCalled_ReturnsFullNameWithNecessaryThings(string firstName, string lastName)
         {
             // Act
-            customer.GreetAndCombineNames(firstName, lastName);
+            customer?.GreetAndCombineNames(firstName, lastName);
             // Assert
-            Assert.That(customer.GreetMessage.Split().Length, Is.EqualTo(3));
-            Assert.That(customer.GreetMessage, Does.Contain("Hi").IgnoreCase);
-            Assert.That(customer.GreetMessage, Does.StartWith("Hi"));
-            Assert.That(customer.GreetMessage, Does.EndWith(lastName));
+            Assert.Multiple(() =>
+            {
+                Assert.That(customer?.GreetMessage.Split().Length, Is.EqualTo(3));
+                Assert.That(customer?.GreetMessage, Does.Contain("Hi").IgnoreCase);
+                Assert.That(customer?.GreetMessage, Does.StartWith("Hi"));
+                Assert.That(customer?.GreetMessage, Does.EndWith(lastName));
 
+            });
         }
 
         [Test]

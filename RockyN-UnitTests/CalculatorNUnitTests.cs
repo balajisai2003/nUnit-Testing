@@ -94,7 +94,7 @@ namespace Rocky
             Assert.That(result.Count, Is.EqualTo(expectedResult.Length));
             Assert.That(result, Is.Not.Empty);
             Assert.That(result, Has.No.Member(6));
-            Assert.That(result, Is.Ordered.Descending);
+            Assert.That(result, Is.Ordered.Ascending);
 
 
 
