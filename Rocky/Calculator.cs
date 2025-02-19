@@ -7,6 +7,11 @@ public class Calculator
         return a + b;
     }
 
+    public double AddNumbersDouble(double a, double b)
+    {
+        return a + b;
+    }
+
     public bool IsOdd(int value)
     {
         return value % 2 != 0;

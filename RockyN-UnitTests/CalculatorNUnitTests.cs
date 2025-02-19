@@ -62,5 +62,20 @@ namespace Rocky
             // Act
             return calculator.IsOdd(value);
         }
+
+
+        [Test]
+        [TestCase(5.4, 10.5, ExpectedResult = 15.9)]
+        [TestCase(5.1, 10.5, ExpectedResult = 15.6)]
+
+        public double AddNumbersDouble_WhenCalled_ReturnsSumOfArguments(double a, double b)
+        {
+            // Arrange
+            var calculator = new Calculator();
+            // Act
+            double result = calculator.AddNumbersDouble(a, b);
+            // Assert
+            return result;
+        }
     }
 }
