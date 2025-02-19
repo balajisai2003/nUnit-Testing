@@ -90,6 +90,14 @@ namespace Rocky
             List<int> result = calculator.GetOddRange(min, max);
             // Assert
             Assert.That(result, Is.EquivalentTo(expectedResult));
+            Assert.That(result, Does.Contain(5));
+            Assert.That(result.Count, Is.EqualTo(expectedResult.Length));
+            Assert.That(result, Is.Not.Empty);
+            Assert.That(result, Has.No.Member(6));
+            Assert.That(result, Is.Ordered.Descending);
+
+
+
         }
     }
 }
